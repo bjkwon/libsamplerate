@@ -372,7 +372,7 @@ sinc_mono_vari_process (SRC_PRIVATE *psrc, SRC_DATA *data)
 	terminate = 1.0 / src_ratio + 1e-20 ;
 
 	/* Main processing loop. */
-	while (filter->out_gen < filter->out_count)
+	while (1)
 	{
 		/* Need to reload buffer? */
 		samples_in_hand = (filter->b_end - filter->b_current + filter->b_len) % filter->b_len ;
